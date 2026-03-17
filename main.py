@@ -267,6 +267,10 @@ def run_full_analysis(
     """
     try:
         # Issue #529: Hot-reload STOCK_LIST from .env on each scheduled run
+            print(f"[DEBUG] 传入的 STOCK_LIST = {STOCK_LIST}")
+            print(f"[DEBUG] 传入的 DEEPSEEK_API_KEY = {DEEPSEEK_API_KEY}")
+
+
         if stock_codes is None:
             config.refresh_stock_list()
 
